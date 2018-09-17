@@ -3,21 +3,19 @@ title: "Homework 1"
 author: "Anita"
 date: "September 14, 2018"
 output:
-  html_document: 
+  html_document:
     keep_md: yes
+  pdf_document: default
   word_document: default
 ---
 
 ```{r echo=FALSE}
 library(gapminder)
+library(tidyverse)
 ```
 
 ```{r}
 head(gapminder)
-```
-Let's look at the population for each coountry and year
-```{r}
-head(gapminder$pop)
 ```
 
 Number of 'country-years' by continent.
@@ -26,8 +24,10 @@ Number of 'country-years' by continent.
 table(gapminder$continent)
 ```
 
-Histogram of the life expectancy
+
 ```{r echo=FALSE}
-hist(gapminder$lifeExp)
+hist(gapminder$lifeExp, xlab= 'Life Expectancy', main = 'Histogram of Life Expectancy', col='blue')
+plot(lifeExp ~ year, gapminder, xlab='Year', ylab='Life Expectancy', col='orange', main='Life Expectancy per year across all countries')
+plot(lifeExp ~ gdpPercap, gapminder, xlab='GDP per capita', ylab='Life Expectancy', col='purple')
 ```
 
