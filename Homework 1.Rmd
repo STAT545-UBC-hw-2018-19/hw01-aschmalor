@@ -3,8 +3,7 @@ title: "Homework 1"
 author: "Anita"
 date: "September 14, 2018"
 output:
-  html_document: 
-    keep_md: yes
+  html_document: default
   word_document: default
 ---
 
@@ -17,7 +16,7 @@ head(gapminder)
 ```
 Let's look at the population for each coountry and year
 ```{r}
-head(gapminder$pop)
+gapminder$pop
 ```
 
 Number of 'country-years' by continent.
