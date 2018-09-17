@@ -1,0 +1,32 @@
+---
+title: "Homework 1"
+author: "Anita"
+date: "September 14, 2018"
+output:
+  html_document: default
+  word_document: default
+---
+
+```{r echo=FALSE}
+library(gapminder)
+```
+
+```{r}
+head(gapminder)
+```
+Let's look at the population for each coountry and year
+```{r}
+gapminder$pop
+```
+
+Number of 'country-years' by continent.
+*Note that each country is counted as many times as years that data from it exists.*
+```{r}
+table(gapminder$continent)
+```
+
+Histogram of the life expectancy
+```{r echo=FALSE}
+hist(gapminder$lifeExp)
+```
+
